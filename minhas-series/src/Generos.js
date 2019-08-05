@@ -8,6 +8,17 @@ const Generos = () => {
             setData(res.data.data);
         })
     }, [])
+
+    const renderizaLinha = record => {
+        return (
+        <tr>
+            <th scope='row'>1</th>
+            <td>{record.name}</td>
+            <td></td>
+        </tr>
+        )
+    }
+    
     return (
     <div>
         <h1>Generos</h1>
@@ -20,11 +31,7 @@ const Generos = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope='row'>1</th>
-                    <td>Mark</td>
-                    <td></td>
-                </tr>
+               {data.map(renderizaLinha)}
             </tbody>
         </table>
         <pre>{JSON.stringify(data)}</pre>
