@@ -17,12 +17,12 @@ import {
   
     return (
       <Navbar color='light' light expand='md'>
-        <NavbarBrand>Minhas Séries</NavbarBrand>
+        <NavbarBrand href='/'>Minhas Séries</NavbarBrand>
         <NavbarToggler onClick={toggle}/>
         <Collapse isOpen={ open } navbar>
           <Nav className='ml-auto' navbar>
             <NavItem>
-              <NavLink href='/'>Generos</NavLink>
+              <NavLink href='/generos'>Generos</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
