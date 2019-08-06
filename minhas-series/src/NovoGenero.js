@@ -6,9 +6,8 @@ const NovoGenero = () => {
             <h1>Novo Genero</h1>
             <form>
                 <div class='form-group'>
-                    <label for='exampleInputEmail1'>Email address</label>
-                    <input type='email' class='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Enter email' />
-                    <small id='emailHelp' class='form-text text-muted'>We'll never share your email with anyone else.</small>
+                    <label for='name'>Nome </label>
+                    <input type='text' className='form-control' id='name' placeholder='Nome do Genero' />
                 </div>
             </form>
         </div>
