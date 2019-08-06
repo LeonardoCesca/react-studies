@@ -24,8 +24,8 @@ function App() {
       <div>
         <Header />
         <Route path='/' exact component={Home} />
-        <Route path='/generos/novo' component={NovoGenero} />
-        <Route path='/generos' component={Generos} />
+        <Route path='/generos/novo' exact component={NovoGenero} />
+        <Route path='/generos' exact component={Generos} />
         <pre>{JSON.stringify(data)}</pre>
       </div>
     </Router>
