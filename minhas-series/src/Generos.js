@@ -19,8 +19,19 @@ const Generos = () => {
         )
     }
     
+    if(data.length === 0) {
+        return (
+            <div className='container'>
+                <h1>Generos</h1>
+                <div className='alert alert-warning' role='alert'>
+                    Você não possui gêneros criados.
+                </div>
+            </div>
+        )
+    }
+
     return (
-    <div>
+    <div className="container">
         <h1>Generos</h1>
         <table className='table table-dark'>
             <thead>
@@ -34,7 +45,6 @@ const Generos = () => {
                {data.map(renderizaLinha)}
             </tbody>
         </table>
-        <pre>{JSON.stringify(data)}</pre>
     </div>
     )
 }
