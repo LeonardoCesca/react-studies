@@ -11,12 +11,16 @@ const Generos = () => {
         })
     }, [])
 
+    const deleteGenero = id => {
+        console.log(id);
+    }
+
     const renderizaLinha = record => {
         return (
         <tr key={record.id}>
             <th scope='row'>{record.id}</th>
             <td>{record.name}</td>
-            <td><button>+</button></td>
+            <td><button onClick={() => deleteGenero(record.id)}>-</button></td>
         </tr>
         )
     }
