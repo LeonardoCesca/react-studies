@@ -12,7 +12,11 @@ const Generos = () => {
     }, [])
 
     const deleteGenero = id => {
-        console.log(id);
+        axios
+        .delete('/api/genres/'+ id)
+        .then(res => {
+            console.log(res);
+        })
     }
 
     const renderizaLinha = record => {
@@ -35,6 +39,11 @@ const Generos = () => {
             </div>
         )
     }
+
+    const id = 6;
+    const filtro = data.filter(item => item.id !== id)
+
+    console.log(filtro);
 
     return (
     <div className="container">
