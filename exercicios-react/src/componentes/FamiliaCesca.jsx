@@ -3,8 +3,8 @@ import Membro from './Membro'
 
 export default props => 
     <div>
-        <Membro nome='Leonardo' sobrenome='Cesca' />
-        <Membro nome='Tais' sobrenome='Cesca' />
-        <Membro nome='Maria' sobrenome='Cesca' />
-        <Membro nome='Olivo' sobrenome='Cesca' />
+        <Membro nome='Leonardo' sobrenome= {props.sobrenome} />
+        <Membro nome='Tais' sobrenome= {props.sobrenome} />
+        <Membro nome='Maria' sobrenome= {props.sobrenome} />
+        <Membro nome='Olivo' sobrenome= {props.sobrenome} />
     </div>
