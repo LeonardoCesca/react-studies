@@ -11,21 +11,35 @@ function App() {
     ],
   });
 
+  const [showPersonsState, setShowPersonsState] = useState ({
+    showPersons: false
+  });
+
   const nameChangedHandler = (event) => {
     setPersonsState({
       persons: [
         { name: 'Max', age: 28},
         { name: event.target.value, age: 29},
         { name: 'Tiago', age: 27},
-      ]
+      ],
     })
+  },
+  
+  togglePersonsHandler = () => {
+    const doesShow = showPersonsState.showPersons;
+    setShowPersonsState({showPersons: !doesShow});
   }
 
   return (
     <div className="App">
-      <Person name={personsState.persons[0].name} age={personsState.persons[0].age} />
-      <Person name={personsState.persons[1].name} age={personsState.persons[1].age} changed={nameChangedHandler} />
-      <Person name={personsState.persons[2].name} age={personsState.persons[2].age} />
+      <button onClick={togglePersonsHandler}>Toggle</button>
+      { showPersonsState.showPersons ?
+      <div>
+        <Person name={personsState.persons[0].name} age={personsState.persons[0].age} />
+        <Person name={personsState.persons[1].name} age={personsState.persons[1].age} changed={nameChangedHandler} />
+        <Person name={personsState.persons[2].name} age={personsState.persons[2].age} />
+      </div> : null
+      } 
     </div>
   );
 }
