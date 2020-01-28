@@ -35,9 +35,12 @@ function App() {
       <button onClick={togglePersonsHandler}>Toggle</button>
       { showPersonsState.showPersons ?
       <div>
-        <Person name={personsState.persons[0].name} age={personsState.persons[0].age} />
-        <Person name={personsState.persons[1].name} age={personsState.persons[1].age} changed={nameChangedHandler} />
-        <Person name={personsState.persons[2].name} age={personsState.persons[2].age} />
+        {personsState.map(person => {
+          return <Person 
+            name={person.name}
+            age={person.age}
+          />
+        })}
       </div> : null
       } 
     </div>
